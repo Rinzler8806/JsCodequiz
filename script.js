@@ -1,19 +1,3 @@
-/**
- * Given I am taking a code quiz
- * When I click the start button
- * Then a timer starts and I am presented with a question
- * When I answer a question
- * Then I am presented with another question
- * When I answer a question incorrectly
- * Then time is subtracted from the clock
- * When all questions are answered or the timer reaches 0
- * Then the game is over
- * When the game is over
- * Then I can save my initials and score
- */
-
-//define questions & answers
-
 var q = ["1. How many hours of class is there each week?<br /><br />", 
 "2. How many hours a week are you expected to study?<br /><br />", 
 "What profession does Shane work in?<br /><br />"];

@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>JsCodequiz</title>
 </head>
 <body>
-    <script>
+    <div id="container">
+        <div id="text001">
+            <h1 id="timer"></h1>
+            <h2>Quiz</h2>
+            Question: <text id="number001">0</text><br />
+            Score: <text id="score001">0</text>
+        <hr />
+                <div id="message001">Click Begin to start</div><br />
+            </div>
+        <div id="text002">
+            <div id="question001"></div>
+            <div id="option001"></div>
+            <div id="option002"></div>
+            <div id="option003"></div>
+            <div id="answer001"></div>
+            <div id="text001">
+                <div id="disappear001"><button class="buttons001" onclick="begin001()">Begin</button></div>
+            </div>
+            <div id="next001"></div>
+        </div>
+        </div>
 
-
-
-
-
-
-    </script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

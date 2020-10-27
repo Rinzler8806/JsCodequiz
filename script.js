@@ -24,21 +24,10 @@ n++;
 var s = 0;
 s++;
 
-var timer=document.getElementById("timer");
-
-function countdown(){
-  count--;
-  timer.textContent= "time left: " + count;
-  if (count===0){
-    clearInterval(interval);
-    timer.textContent= "Your time is up!";
-  }
-}
-
+var timer = document.getElementById("timer");
 var count = 30;
-var interval = setInterval(countdown, 1000);
-
 function begin001() {
+    
     disappear001.innerHTML = "";
     message001.innerHTML = "";
     question001.innerHTML = q[0];
@@ -46,7 +35,14 @@ function begin001() {
     option002.innerHTML = a2[0];
     option003.innerHTML = a3[0];
     number001.innerHTML = n++;
-    countdown()
+    var interval = setInterval(function(){
+        count--;
+        timer.textContent = "time left: " + count;
+        if (count === 0) {
+            clearInterval(interval);
+            timer.textContent = "Your time is up!";
+        }
+    }, 1000)
 }
 
 function q1c() {

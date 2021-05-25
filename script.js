@@ -14,22 +14,23 @@
 
 //define questions & answers
 
-var q = ["1. How many hours of class is there each week?<br /><br />", 
-"2. How many hours a week are you expected to study?<br /><br />", 
-"What profession does Shane work in?<br /><br />"];
+var q = ["1. How many hours of class is there each week?<br /><br />",
+    "2. How many hours a week are you expected to study?<br /><br />",
+    "What profession does Shane work in?<br /><br />"
+];
 var a1 = ["<button class=buttons002 onclick=q1i()>6</button>",
-          "<button class=buttons002 onclick=q2i()>10</button>",
-          "<button class=buttons002 onclick=q3i()>Computer Programming</button>",
+    "<button class=buttons002 onclick=q2i()>10</button>",
+    "<button class=buttons002 onclick=q3i()>Computer Programming</button>",
 ];
 
 var a2 = ["<button class=buttons002 onclick=q1i()>8</button>",
-          "<button class=buttons002 onclick=q2i()>15</button>",
-          "<button class=buttons002 onclick=q3c()>Construction</button>",
+    "<button class=buttons002 onclick=q2i()>15</button>",
+    "<button class=buttons002 onclick=q3c()>Construction</button>",
 ];
 
 var a3 = ["<button class=buttons002 onclick=q1c()>10</button>",
-          "<button class=buttons002 onclick=q2c()>20</button>",
-          "<button class=buttons002 onclick=q3i()>Finance</button>",
+    "<button class=buttons002 onclick=q2c()>20</button>",
+    "<button class=buttons002 onclick=q3i()>Finance</button>",
 ];
 
 var c = ["Correct", "Correct", "Correct"];
@@ -40,21 +41,11 @@ n++;
 var s = 0;
 s++;
 
-var timer=document.getElementById("timer");
-
-function countdown(){
-  count--;
-  timer.textContent= "time left: " + count;
-  if (count===0){
-    clearInterval(interval);
-    timer.textContent= "Your time is up!";
-  }
-}
-
+var timer = document.getElementById("timer");
 var count = 30;
-var interval = setInterval(countdown, 1000);
 
 function begin001() {
+
     disappear001.innerHTML = "";
     message001.innerHTML = "";
     question001.innerHTML = q[0];
@@ -62,8 +53,16 @@ function begin001() {
     option002.innerHTML = a2[0];
     option003.innerHTML = a3[0];
     number001.innerHTML = n++;
-    countdown()
+    var interval = setInterval(function () {
+        count--;
+        timer.textContent = "time left: " + count;
+        if (count === 0) {
+            clearInterval(interval);
+            timer.textContent = "Your time is up!";
+        }
+    }, 1000)
 }
+
 
 function q1c() {
     answer001.innerHTML = "<div id=green001>" + c[0] + "</div>";
@@ -137,13 +136,13 @@ function q3i() {
 }
 
 function end001() {
-  message001.innerHTML = "End of Quiz.";
-  question001.innerHTML = "";
-  option001.innerHTML = "";
-  option002.innerHTML = "";
-  option003.innerHTML = "";
-  next001.innerHTML = "<div id=text001>" + "<button class=buttons001 onclick=repeat001()>Repeat</button>" + "</div>";
-  answer001.innerHTML = "";
+    message001.innerHTML = "End of Quiz.";
+    question001.innerHTML = "";
+    option001.innerHTML = "";
+    option002.innerHTML = "";
+    option003.innerHTML = "";
+    next001.innerHTML = "<div id=text001>" + "<button class=buttons001 onclick=repeat001()>Repeat</button>" + "</div>";
+    answer001.innerHTML = "";
 }
 
 function repeat001() {

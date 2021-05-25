@@ -43,9 +43,14 @@ s++;
 
 var timer = document.getElementById("timer");
 var count = 30;
+<<<<<<< HEAD
 
 function begin001() {
 
+=======
+function begin001() {
+    
+>>>>>>> 15c8eed22945e9e57ce94957ec1503ee9e96d933
     disappear001.innerHTML = "";
     message001.innerHTML = "";
     question001.innerHTML = q[0];
@@ -53,7 +58,11 @@ function begin001() {
     option002.innerHTML = a2[0];
     option003.innerHTML = a3[0];
     number001.innerHTML = n++;
+<<<<<<< HEAD
     var interval = setInterval(function () {
+=======
+    var interval = setInterval(function(){
+>>>>>>> 15c8eed22945e9e57ce94957ec1503ee9e96d933
         count--;
         timer.textContent = "time left: " + count;
         if (count === 0) {
